@@ -19,14 +19,14 @@ impl Miner {
             Some(f64) => f64,
             None => {
                 println!(
-                    "Defaulting to max amount of v1 Ore token in wallet: {}",
+                    "Defaulting to max amount of v1 Coal token in wallet: {}",
                     sender_balance
                 );
                 sender_balance
             }
         };
         let amount = amount_f64_to_u64_v1(amount_f64);
-        let amount_ui = amount_to_ui_amount(amount, ore_api::consts::TOKEN_DECIMALS_V1);
+        let amount_ui = amount_to_ui_amount(amount, coal_api::consts::TOKEN_DECIMALS_V1);
 
         if !ask_confirm(
             format!(
