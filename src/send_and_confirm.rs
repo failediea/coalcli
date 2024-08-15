@@ -184,7 +184,7 @@ impl Miner {
                                                 // Instruction error
                                                 solana_sdk::transaction::TransactionError::InstructionError(_, err) => {
                                                     match err {
-                                                        // Custom instruction error, parse into OreError
+                                                        // Custom instruction error, parse into CoalError
                                                         solana_program::instruction::InstructionError::Custom(err_code) => {
                                                             match err_code {
                                                                 e if e == CoalError::NeedsReset as u32 => {
